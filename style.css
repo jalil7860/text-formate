@@ -119,7 +119,7 @@ tr:hover {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 469px) {
     body {
         padding: 15px;
     }
@@ -158,6 +158,51 @@ tr:hover {
 
     .credit {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 468px) {
+    body {
+        padding: 10px;
+    }
+
+    .table-container {
+        width: 98%;
+        max-height: 80vh;
+        background: rgba(0, 0, 0, 0.35) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        backdrop-filter: blur(10px) !important;
+        transform: translateZ(0);
+        will-change: transform;
+        -webkit-transform: translate3d(0,0,0);
+    }
+
+    .title-container {
+        background: rgba(0, 0, 0, 0.35) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        backdrop-filter: blur(10px) !important;
+        transform: translateZ(0);
+        will-change: transform;
+        -webkit-transform: translate3d(0,0,0);
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    th {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    td {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .credit {
+        font-size: 0.9rem;
     }
 }
 
