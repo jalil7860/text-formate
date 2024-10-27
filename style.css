@@ -122,6 +122,8 @@ tr:hover {
         width: 95%;
         max-height: 70vh;
         background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     h1 {
@@ -144,6 +146,8 @@ tr:hover {
     
     .title-container {
         background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(10px);
+       -webkit-backdrop-filter: blur(10px);
     }
 }
 
