@@ -41,13 +41,16 @@ body {
 
 .title-container {
     background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 1;
 }
 
 h1 {
@@ -67,13 +70,16 @@ h1 {
     width: 90%;
     max-width: 800px;
     background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     max-height: 500px;
     overflow-y: auto;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 1;
 }
 
 table {
@@ -121,9 +127,19 @@ tr:hover {
     .table-container {
         width: 95%;
         max-height: 70vh;
-        background: rgba(0, 0, 0, 0.35);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.35) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        backdrop-filter: blur(10px) !important;
+        transform: translateZ(0);
+        will-change: transform;
+    }
+
+    .title-container {
+        background: rgba(0, 0, 0, 0.35) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        backdrop-filter: blur(10px) !important;
+        transform: translateZ(0);
+        will-change: transform;
     }
 
     h1 {
@@ -142,12 +158,6 @@ tr:hover {
 
     .credit {
         font-size: 1rem;
-    }
-    
-    .title-container {
-        background: rgba(0, 0, 0, 0.35);
-        backdrop-filter: blur(10px);
-       -webkit-backdrop-filter: blur(10px);
     }
 }
 
